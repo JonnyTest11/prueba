@@ -15,10 +15,22 @@ export class AppComponent {
 
   seleccioneEmpleado: Empleados = new Empleados();
 
-  agregarOEditar(){
-    this.seleccioneEmpleado.id = this.empleadosArray.length + 1;
-    this.empleadosArray.push(this.seleccioneEmpleado);
+  abrirEditar(empleado: Empleados){
+    this.seleccioneEmpleado = empleado;
+  }
 
+  agregarOEditar(){
+    if (this.seleccioneEmpleado.id === 0) {
+      this.seleccioneEmpleado.id = this.empleadosArray.length + 1;
+      this.empleadosArray.push(this.seleccioneEmpleado);
+    }
     this.seleccioneEmpleado = new Empleados();
+  }
+  
+  eliminar(){
+    if (confirm("¿Esta seguro de eliminarlo?")) {
+      this.empleadosArray = this.empleadosArray.filter(x => x != this.seleccioneEmpleado);
+      this.seleccioneEmpleado = new Empleados();
+    }
   }
 }

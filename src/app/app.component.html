@@ -19,6 +19,15 @@
                 <div class="form-gorup">
                     <input type="text" [(ngModel)]="seleccioneEmpleado.nombre" placeholder="Nombre" class="form-control">
                 </div>
+                <div class="form-gorup">
+                    <input type="text" [(ngModel)]="seleccioneEmpleado.apellido" placeholder="Apellido" class="form-control">
+                </div>
+                <div class="form-gorup">
+                    <input type="text" [(ngModel)]="seleccioneEmpleado.ciudad" placeholder="Ciudad" class="form-control">
+                </div>
+                <button (click)="agregarOEditar()" class="btn btn-primary">
+                    Aceptar
+                </button>
             </div>
         </div>         
 

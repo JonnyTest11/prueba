@@ -14,4 +14,11 @@ export class AppComponent {
   ]
 
   seleccioneEmpleado: Empleados = new Empleados();
+
+  agregarOEditar(){
+    this.seleccioneEmpleado.id = this.empleadosArray.length + 1;
+    this.empleadosArray.push(this.seleccioneEmpleado);
+
+    this.seleccioneEmpleado = new Empleados();
+  }
 }

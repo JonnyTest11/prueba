@@ -1,1 +1,30 @@
-<h1>Hola Mundo</h1>
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">Crud simple en angular</a>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <ul class="list-group mt-4">
+                <li *ngFor="let empleado of empleadosArray" class="list-group-item list-group-item-action">
+                    <span class="badge badge-primary">{{empleado.id}}</span> {{empleado.nombre}}  {{empleado.apellido}} - {{empleado.ciudad}}
+                </li>
+            </ul>
+        
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="card-title">
+                    Inserte un nuevo empleado
+                </div>
+                <div class="form-gorup">
+                    <input type="text" [(ngModel)]="seleccioneEmpleado.nombre" placeholder="Nombre" class="form-control">
+                </div>
+            </div>
+        </div>         
+
+        </div>
+        <div class="col-md-4">
+            <h1>Hola mundo</h1>
+        </div>
+    </div>
+</div>

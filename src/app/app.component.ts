@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Empleados } from "./modelos/empleados";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'prueba';
+  empleadosArray: Empleados[] = [
+    {id: 1, nombre: "Jonathan", apellido: "Gonzalez", ciudad: "Bogotá"},
+    {id: 2, nombre: "Diego", apellido: "Gonzalez", ciudad: "Bogotá"},
+    {id: 3, nombre: "Daniel", apellido: "Gonzalez", ciudad: "Bogotá"}
+  ]
+
+  seleccioneEmpleado: Empleados = new Empleados();
 }
